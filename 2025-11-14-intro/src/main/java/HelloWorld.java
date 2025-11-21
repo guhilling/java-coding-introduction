@@ -24,6 +24,8 @@ public class HelloWorld {
             This is _not_ a javadoc comment. So no special syntax is used here
             as it's purely for instructional purposes.
          */
-        System.out.println("Hello, World!");
+        System.out.println("Hello, Osnabrück!");
+        // Goodbye message
+        System.out.println("Goodbye");
     }
 }
