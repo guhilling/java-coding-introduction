@@ -8,7 +8,5 @@
     </parent>
 
     <artifactId>intro</artifactId>
-    <packaging>jar</packaging>
-
     <name>Intro to Java</name>
 </project>

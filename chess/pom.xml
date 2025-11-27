@@ -7,6 +7,15 @@
         <artifactId>samples</artifactId>
     </parent>
 
-    <artifactId>classes</artifactId>
-    <name>Intro to Java Classes</name>
+    <artifactId>chess</artifactId>
+    <name>Demo Chessboard Project</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.13.4</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 </project>

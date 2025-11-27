@@ -7,6 +7,6 @@
         <artifactId>samples</artifactId>
     </parent>
 
-    <artifactId>classes</artifactId>
-    <name>Intro to Java Classes</name>
+    <artifactId>college</artifactId>
+    <name>College Model</name>
 </project>
