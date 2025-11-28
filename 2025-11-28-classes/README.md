@@ -7,7 +7,7 @@
 * ``break``, ``continue`` and why to avoid them.
 * Unreachable code.
 * Expressions and operators.
-* ``Object``s and other Classes.
+* ``Object``s and other ArgumentUtils.
 * Array initialization.
 
 ## A short introduction to Java project setup and unit testing
