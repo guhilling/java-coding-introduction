@@ -2,6 +2,12 @@
 
 ## Euclid
 
+* Math expressions.
+
+## Java Basics
+
+* Reference and Value Types.
+
 ## Basics of OO
 
 * ``Object``s and other Classes.
