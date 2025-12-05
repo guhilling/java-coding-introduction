@@ -1,3 +1,5 @@
+package de.hilling.codingintro.math;
+
 /**
  * Euclidean algorithm.
  * <br/>
