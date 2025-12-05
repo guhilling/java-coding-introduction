@@ -9,4 +9,13 @@
 
     <artifactId>oop</artifactId>
     <name>Intro to Object Oriented Programming</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.14.1</version>
+        </dependency>
+    </dependencies>
+
 </project>
