@@ -6,4 +6,6 @@ package de.hilling.chess;
  */
 public class ChessBoard {
     ChessPiece[][] chessBoard = new ChessPiece[8][8];
+
+
 }
