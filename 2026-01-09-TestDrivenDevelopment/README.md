@@ -1,24 +1,21 @@
-# Plan for Objects
+# Plan for Test Driven Development
 
-## Basics of Classes and Encapsulation in Java
+## Repeat and do a real task
 
-* Classes:
-  * Declaration.
-  * Instantiation of objects. 
-  * Packages and access modifiers.
-  * Fields and methods.
-
-* Static members revisited.
-
-* Local variables.
-* Shadowing.
-* `this`
-* Method overloading.
+* The task will be: Make the tests green.
+* Perform some optimizations of the given code.
 
 ## Java project setup and unit testing
 
 * more details about maven.
 * running unit tests on github ([Continuous integration](https://en.wikipedia.org/wiki/Continuous_integration))
+
+## Some new Language features:
+
+* Constructors.
+* Object destruction.
+* Enum.
+* Packages and import.
 
 ## Planning for the chess project.
 

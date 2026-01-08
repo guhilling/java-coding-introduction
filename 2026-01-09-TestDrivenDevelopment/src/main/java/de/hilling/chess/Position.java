@@ -4,6 +4,7 @@ package de.hilling.chess;
  * Represents a position on the board.
  * Objects of this class are immutable, correct coordinates are checked when the constructor is called.
  */
+// TODO: Use static accessor to singletons
 public class Position {
     public final int x;
     public final int y;
