@@ -11,6 +11,9 @@ public class Position {
     final char[] xCharacters = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'};
 
     public Position(int x, int y) {
+        if(x<0 || y<0 || x>7 || y>7) {
+            throw new IllegalArgumentException("x and y need to be between 0 and 7");
+        }
         this.x = x;
         this.y = y;
     }
