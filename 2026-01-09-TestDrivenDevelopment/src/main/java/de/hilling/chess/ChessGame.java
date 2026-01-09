@@ -5,23 +5,29 @@ package de.hilling.chess;
  * href="https://en.wikipedia.org/wiki/Algebraic_notation_(chess)#Long_algebraic_notation">Wikipedia</a>).
  */
 public class ChessGame {
-    ChessPiece[][] board = new ChessPiece[8][8];
+    private ChessPiece[][] board = new ChessPiece[8][8];
 
     public ChessGame() {
         for(int x=0; x<8; x++) {
-            setPawn(x, 1, Color.WHITE);
-            setPawn(x, 6, Color.BLACK);
+            setPieceForWhiteAndBlack(PieceType.PAWN, x, 1);
         }
-        setPiece(PieceType.KING, Color.WHITE, 4, 0);
-        setPiece(PieceType.KING, Color.BLACK, 4, 7);
+        setPieceForWhiteAndBlack(PieceType.KING, 4, 0);
+        setPieceForWhiteAndBlack(PieceType.ROOK, 0, 0);
+        setPieceForWhiteAndBlack(PieceType.ROOK, 7, 0);
+        setPieceForWhiteAndBlack(PieceType.KNIGHT, 1, 0);
+        setPieceForWhiteAndBlack(PieceType.KNIGHT, 6, 0);
+        setPieceForWhiteAndBlack(PieceType.BISHOP, 2, 0);
+        setPieceForWhiteAndBlack(PieceType.BISHOP, 5, 0);
+        setPieceForWhiteAndBlack(PieceType.QUEEN, 3, 0);
     }
 
     private void setPiece(PieceType pieceType, Color color, int x, int y) {
         board[x][y] = new ChessPiece(pieceType, color);
     }
 
-    private void setPawn(int x, int y, Color color) {
-        setPiece(PieceType.PAWN, color, x, y);
+    private void setPieceForWhiteAndBlack(PieceType pieceType, int x, int y) {
+        setPiece(pieceType, Color.WHITE, x, y);
+        setPiece(pieceType, Color.BLACK, x, 7-y);
     }
 
     public ChessPiece get(Position position) {

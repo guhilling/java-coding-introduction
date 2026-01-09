@@ -12,8 +12,8 @@ public class ChessPiece {
     @Override
     public String toString() {
         return switch (color) {
-            case WHITE -> type.mnemonic().toUpperCase();
-            case BLACK -> type.mnemonic();
+            case WHITE -> type.shortcut().toUpperCase();
+            case BLACK -> type.shortcut();
         };
     }
 }

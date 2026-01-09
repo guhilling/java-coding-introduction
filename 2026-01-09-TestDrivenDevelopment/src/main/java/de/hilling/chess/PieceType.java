@@ -11,7 +11,7 @@ public enum PieceType {
     KING,
     BISHOP;
 
-    public String mnemonic() {
+    public String shortcut() {
         if(this == KNIGHT) {
             return "n";
         } else {
