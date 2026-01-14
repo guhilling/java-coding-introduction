@@ -17,6 +17,7 @@
         <module>2025-12-05-oop</module>
         <module>2025-12-12-encapsulation</module>
         <module>2026-01-09-TestDrivenDevelopment</module>
+        <module>2026-01-09-Tasks</module>
     </modules>
 
     <properties>
