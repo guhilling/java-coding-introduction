@@ -68,13 +68,13 @@ class ChessGameTest {
             chessGame.move("a2z4");
             fail("Illegal move exception");
         } catch (IllegalArgumentException iae) {
-            assertEquals("Illegal move: a2z4", iae.getMessage());
+            assertEquals("Illegal position string: z4", iae.getMessage());
         }
     }
 
     @Test
     void movePawn() {
-        chessGame.move("a2a4");
+        chessGame.move("e2e4");
         assertEquals(E2E4_POSITION, chessGame.toString());
     }
 }

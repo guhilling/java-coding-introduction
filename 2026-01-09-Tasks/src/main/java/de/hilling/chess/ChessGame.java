@@ -64,5 +64,7 @@ public class ChessGame {
         }
         Position from = Position.from(move.substring(0,2));
         Position to = Position.from(move.substring(2,4));
+        board[to.x][to.y] = board[from.x][from.y];
+        board[from.x][from.y] =null;
     }
 }
