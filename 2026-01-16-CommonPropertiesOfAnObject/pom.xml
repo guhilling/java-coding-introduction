@@ -7,8 +7,8 @@
         <artifactId>samples</artifactId>
     </parent>
 
-    <artifactId>test-driven-development</artifactId>
-    <name>Intro to Test Driven Development (TDD)</name>
+    <artifactId>objects-intro</artifactId>
+    <name>Intro to Objects</name>
 
     <dependencies>
         <dependency>
