@@ -10,11 +10,4 @@
     <artifactId>classes</artifactId>
     <name>Intro to Java ArgumentUtils</name>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.14.1</version>
-        </dependency>
-    </dependencies>
 </project>

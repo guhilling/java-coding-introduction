@@ -10,12 +10,4 @@
     <artifactId>encapsulation</artifactId>
     <name>Intro to encapsulation using classes</name>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.14.1</version>
-        </dependency>
-    </dependencies>
-
 </project>

@@ -10,12 +10,4 @@
     <artifactId>test-driven-development</artifactId>
     <name>Intro to Test Driven Development (TDD)</name>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.14.1</version>
-        </dependency>
-    </dependencies>
-
 </project>
