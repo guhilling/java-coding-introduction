@@ -19,6 +19,7 @@
         <module>2026-01-09-TestDrivenDevelopment</module>
         <module>2026-01-09-Tasks</module>
         <module>2026-01-16-CommonPropertiesOfAnObject</module>
+        <module>2026-01-23-Private_Constructors</module>
     </modules>
 
     <properties>
