@@ -1,5 +1,6 @@
 package de.hilling.chess;
 
+import java.util.Objects;
 import java.util.regex.Pattern;
 
 /**
@@ -7,7 +8,7 @@ import java.util.regex.Pattern;
  * Objects of this class are immutable, correct coordinates are checked when the constructor is called.
  */
 // TODO: Use static accessor to singletons
-public class Position {
+public class Position extends Object{
     private static final Pattern POSITION_PATTERN = Pattern.compile("[a-h][1-8]");
 
     public final int x;
@@ -34,5 +35,23 @@ public class Position {
     @Override
     public String toString() {
         return String.format("%c%d", xCharacters[x], y + 1);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (!(obj instanceof Position)) {
+            return false;
+        } else {
+            Position other = (Position) obj;
+            return x == other.x && y == other.y;
+        }
+    }
+
+    @Override
+    public int hashCode() {
+        return x + y * 8;
     }
 }

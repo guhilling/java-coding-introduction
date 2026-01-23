@@ -70,8 +70,17 @@ public class ChessGame {
         if(fromPiece != null) {
             board[to.x][to.y] = fromPiece;
             board[from.x][from.y] = null;
+            moves.add(move);
         } else {
             throw new IllegalArgumentException("no piece on " + from);
         }
+    }
+
+    public String getMoves() {
+        String result = "";
+        for(String move : moves) {
+            result = result + move + '\n';
+        }
+        return result;
     }
 }

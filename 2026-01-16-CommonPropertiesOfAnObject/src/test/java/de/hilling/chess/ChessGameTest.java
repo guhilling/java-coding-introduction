@@ -29,6 +29,17 @@ class ChessGameTest {
     |P P P P   P P P|
     |R N B Q K B N R|
     -----------------""";
+    private static final String E2E4E7E5_POSITION = """
+    -----------------
+    |r n b q k b n r|
+    |p p p p   p p p|
+    |               |
+    |        p      |
+    |        P      |
+    |               |
+    |P P P P   P P P|
+    |R N B Q K B N R|
+    -----------------""";
 
     private ChessGame chessGame;
 
@@ -77,5 +88,13 @@ class ChessGameTest {
     void movePawn() {
         chessGame.move("e2e4");
         assertEquals(E2E4_POSITION, chessGame.toString());
+    }
+    @Test
+
+    void movePawns() {
+        chessGame.move("e2e4");
+        chessGame.move("e7e5");
+        assertEquals(E2E4E7E5_POSITION, chessGame.toString());
+        assertEquals("e2e4\ne7e5\n", chessGame.getMoves());
     }
 }
