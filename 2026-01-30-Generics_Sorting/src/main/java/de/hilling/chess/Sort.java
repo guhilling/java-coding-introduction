@@ -63,7 +63,7 @@ public class Sort {
                 swap(elements, i, j);
             }
         }
-        print("put pivto to " + (i + 1));
+        print("move pivot element
         swap(elements, i + 1, right);
         return i + 1;
     }
