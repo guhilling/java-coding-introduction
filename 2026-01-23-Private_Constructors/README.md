@@ -3,9 +3,9 @@
 ## Last time
 * Object equality (`equals()`).
 * ... and `hashCode()`.
-* It's not a "secure hash", so collistions are OK!
+* It's not a "secure hash", so collisions are OK!
 
-## Some more Error Handling (Chapter 6)
+## Some more Exception Handling (Chapter 6)
 
 * "Checked" vs. "Unchecked" Exceptions.
 * Stacktraces.

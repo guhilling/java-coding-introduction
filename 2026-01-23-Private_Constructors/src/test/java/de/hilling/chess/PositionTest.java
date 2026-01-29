@@ -33,6 +33,12 @@ class PositionTest {
     }
 
     @Test
+    void accessPositionObject() {
+        Position positionA = Position.of("a1");
+        assertSame(positionA, Position.of("a1"));
+    }
+
+    @Test
     void denyNegativePositions() {
         try {
             Position.of(-1, 0);
@@ -46,6 +52,16 @@ class PositionTest {
     void denyOverflowPositions() {
         try {
             Position.of(0, 8);
+            fail("IllegalArgumentException expected");
+        } catch (IllegalArgumentException ile) {
+            // success
+        }
+    }
+
+    @Test
+    void denyIllegalStringPositions() {
+        try {
+            Position.of("a9");
             fail("IllegalArgumentException expected");
         } catch (IllegalArgumentException ile) {
             // success
