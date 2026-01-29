@@ -12,7 +12,6 @@ import org.jspecify.annotations.NonNull;
  */
 
 public class Position extends Object {
-    private static final Pattern               POSITION_PATTERN = Pattern.compile("[a-h][1-8]");
     private static final char[]                X_CHARACTERS     = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'};
     private static final Map<String, Position> VALID_POSITIONS  = new HashMap<>();
 
