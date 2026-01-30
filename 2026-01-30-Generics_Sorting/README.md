@@ -1,4 +1,4 @@
-# Private Constructors and Factories
+# Generics and Sorting
 
 ## Recap: Exception Handling (Chapter 6)
 
