@@ -21,6 +21,7 @@
         <module>2026-01-16-CommonPropertiesOfAnObject</module>
         <module>2026-01-23-Private_Constructors</module>
         <module>2026-01-30-Generics_Sorting</module>
+        <module>2026-02-05-Retro_Copilot</module>
     </modules>
 
     <properties>
