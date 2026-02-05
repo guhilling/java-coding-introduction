@@ -3,6 +3,8 @@ package de.hilling.chess;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.jspecify.annotations.NonNull;
+
 /**
  * A (not so) small example for a chessboard maybe understanding Long algebraic notation (@see <a
  * href="https://en.wikipedia.org/wiki/Algebraic_notation_(chess)#Long_algebraic_notation">Wikipedia</a>).
@@ -17,13 +19,13 @@ public class ChessGame {
             setPieceForWhiteAndBlack(PieceType.PAWN, x, 1);
         }
         setPieceForWhiteAndBlack(PieceType.KING, 4, 0);
+        setPieceForWhiteAndBlack(PieceType.QUEEN, 3, 0);
         setPieceForWhiteAndBlack(PieceType.ROOK, 0, 0);
         setPieceForWhiteAndBlack(PieceType.ROOK, 7, 0);
         setPieceForWhiteAndBlack(PieceType.KNIGHT, 1, 0);
         setPieceForWhiteAndBlack(PieceType.KNIGHT, 6, 0);
         setPieceForWhiteAndBlack(PieceType.BISHOP, 2, 0);
         setPieceForWhiteAndBlack(PieceType.BISHOP, 5, 0);
-        setPieceForWhiteAndBlack(PieceType.QUEEN, 3, 0);
     }
 
     private void setPiece(PieceType pieceType, Color color, int x, int y) {
@@ -35,7 +37,7 @@ public class ChessGame {
         setPiece(pieceType, Color.BLACK, x, 7-y);
     }
 
-    public ChessPiece get(Position position) {
+    public ChessPiece get(@NonNull Position position) {
         return board[position.x][position.y];
     }
 
@@ -61,7 +63,7 @@ public class ChessGame {
         return sb.toString();
     }
 
-    public void move(String move) {
+    public void move(@NonNull String move) {
         if(move.length() != 4) {
             throw new IllegalArgumentException("Move must be 4 characters long");
         }

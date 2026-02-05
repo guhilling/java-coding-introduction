@@ -1,5 +1,8 @@
 package de.hilling.chess;
 
+/**
+ * Represents a chess piece with a type and color.
+ */
 public class ChessPiece {
     public final PieceType type;
     public final Color     color;

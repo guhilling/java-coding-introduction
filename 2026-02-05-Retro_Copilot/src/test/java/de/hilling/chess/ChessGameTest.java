@@ -1,46 +1,26 @@
 package de.hilling.chess;
 
+import uk.org.webcompere.testgadgets.testdatafactory.TestData;
+import uk.org.webcompere.testgadgets.testdatafactory.TestDataFactory;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.fail;
 
+import java.nio.file.Files;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
 
+@TestDataFactory
 class ChessGameTest {
-    private static final String STARTPOSITION = """
-    -----------------
-    |r n b q k b n r|
-    |p p p p p p p p|
-    |               |
-    |               |
-    |               |
-    |               |
-    |P P P P P P P P|
-    |R N B Q K B N R|
-    -----------------""";
-    private static final String E2E4_POSITION = """
-    -----------------
-    |r n b q k b n r|
-    |p p p p p p p p|
-    |               |
-    |               |
-    |        P      |
-    |               |
-    |P P P P   P P P|
-    |R N B Q K B N R|
-    -----------------""";
-    private static final String E2E4E7E5_POSITION = """
-    -----------------
-    |r n b q k b n r|
-    |p p p p   p p p|
-    |               |
-    |        p      |
-    |        P      |
-    |               |
-    |P P P P   P P P|
-    |R N B Q K B N R|
-    -----------------""";
+    @TestData("startposition.txt")
+    private String STARTPOSITION;
+    @TestData("e2e4position.txt")
+    private String E2E4_POSITION;
+    @TestData("e2e4e7e5position.txt")
+    private String E2E4E7E5_POSITION;
 
     private ChessGame chessGame;
 
@@ -59,7 +39,6 @@ class ChessGameTest {
         assertEquals(Color.BLACK, blackPawn.color);
     }
 
-    @Test
     void testSetupToString() {
         assertEquals(STARTPOSITION, chessGame.toString());
     }
