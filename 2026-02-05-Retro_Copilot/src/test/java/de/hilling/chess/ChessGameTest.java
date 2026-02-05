@@ -1,6 +1,7 @@
 package de.hilling.chess;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -65,22 +66,13 @@ class ChessGameTest {
 
     @Test
     void illegalMoveLength() {
-        try {
-            chessGame.move("a2a4bb");
-            fail("Illegal move exception");
-        } catch (IllegalArgumentException iae) {
-            // nothing to do
-        }
+        assertThrows(IllegalArgumentException.class, () -> chessGame.move("a2a4bb"));
     }
 
     @Test
     void illegalMoveCharacters() {
-        try {
-            chessGame.move("a2z4");
-            fail("Illegal move exception");
-        } catch (IllegalArgumentException iae) {
-            assertEquals("Illegal position: z4", iae.getMessage());
-        }
+        IllegalArgumentException iae = assertThrows(IllegalArgumentException.class, () -> chessGame.move("a2z4"));
+        assertEquals("Illegal position: z4", iae.getMessage());
     }
 
     @Test
