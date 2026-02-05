@@ -56,12 +56,8 @@ class ChessGameTest {
 
     @Test
     void illegalMoveMoveNotPossibleForPawn() {
-        try {
-            chessGame.move("a2a5");
-            fail("Illegal move exception");
-        } catch (IllegalArgumentException iae) {
-            assertEquals("Invalid pawn move", iae.getMessage());
-        }
+        IllegalArgumentException iae = assertThrows(IllegalArgumentException.class, () -> chessGame.move("a2a5"));
+        assertEquals("Invalid pawn move", iae.getMessage());
     }
 
     @Test
@@ -69,8 +65,8 @@ class ChessGameTest {
         chessGame.move("e2e4");
         assertEquals(E2E4_POSITION, chessGame.toString());
     }
-    @Test
 
+    @Test
     void movePawns() {
         chessGame.move("e2e4");
         chessGame.move("e7e5");
