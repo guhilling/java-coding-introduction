@@ -10,6 +10,7 @@ import java.util.List;
 public class ChessGame {
     private ChessPiece[][] board = new ChessPiece[8][8];
     private List<String> moves = new LinkedList<>();
+    private MoveValidator validator = new MoveValidator(this.board);
 
     public ChessGame() {
         for(int x=0; x<8; x++) {
@@ -68,6 +69,7 @@ public class ChessGame {
         Position to = Position.of(move.substring(2, 4));
         ChessPiece fromPiece = board[from.x][from.y];
         if(fromPiece != null) {
+            validator.validateMove(from, to, fromPiece);
             board[to.x][to.y] = fromPiece;
             board[from.x][from.y] = null;
             moves.add(move);

@@ -48,7 +48,6 @@ class ChessGameTest {
         chessGame = new ChessGame();
     }
 
-    // TODO: test more pieces, refactoring
     @Test
     void testSetup() {
         ChessPiece whitePawn = chessGame.get(Position.of(1, 1));
@@ -81,6 +80,16 @@ class ChessGameTest {
             fail("Illegal move exception");
         } catch (IllegalArgumentException iae) {
             assertEquals("Illegal position: z4", iae.getMessage());
+        }
+    }
+
+    @Test
+    void illegalMoveMoveNotPossibleForPawn() {
+        try {
+            chessGame.move("a2a5");
+            fail("Illegal move exception");
+        } catch (IllegalArgumentException iae) {
+            assertEquals("Invalid pawn move", iae.getMessage());
         }
     }
 
