@@ -2,7 +2,6 @@ package de.hilling.chess;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.regex.Pattern;
 
 import org.jspecify.annotations.NonNull;
 
